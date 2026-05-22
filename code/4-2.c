@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> [cite: 612]
 
 int main(int argc, const char* argv[]) {
     int mode = (argc >= 2) ? atoi(argv[1]) : 0;
@@ -15,6 +15,8 @@ int main(int argc, const char* argv[]) {
         fclose(fp);
     } else if (mode == 2) {
         _Exit(0);
+    } else {
+        fclose(fp);
     }
 
     return 0;

@@ -7,9 +7,8 @@ int main(int argc, const char* argv[]) {
 
     FILE* fp = fopen(argv[1], "r");
     const char* target_str = argv[2];
-
-
-    
+    char buf[512];
+    while (fgets(buf, sizeof(buf), fp))
+        if (strstr(buf, target_str)) printf("%s", buf);
     fclose(fp);
 }
-
